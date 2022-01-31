@@ -1,0 +1,165 @@
+/*
+0 - 650px       :   Phone
+650 - 992px     :   Tablet Potrait
+650 - 1200px    :   Tablet Landscape
+[1200 - 1800px] :   Desktop
+1800px +        :   Big Desktop
+*/
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-lans
+- big-desktop
+
+ORDER:  Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.text-green {
+  color: #819691;
+}
+
+.bg-color_lightGrey {
+  background-color: #F4F4F5;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* default 16px */
+  /* font-size: 10px; */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  transition: all 0.4s;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+input:focus,
+textarea:focus,
+button:focus,
+select:focus,
+a:focus {
+  color: white;
+}
+
+button:focus {
+  outline: 0;
+}
+
+@media only screen and (max-width: 62em) {
+  main:not([page=home]) {
+    margin-top: unset;
+  }
+}
+
+p {
+  font-family: "HKGrotesk-Regular";
+  font-size: 1.4rem;
+  color: #222222;
+}
+@media only screen and (max-width: 62em) {
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "HKGrotesk-Bold";
+}
+
+li, a {
+  font-family: "HKGrotesk-Regular";
+}
+
+.forDesktop {
+  display: block !important;
+}
+@media only screen and (max-width: 62em) {
+  .forDesktop {
+    display: none !important;
+  }
+}
+
+.forDesktop-dflex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+@media only screen and (max-width: 62em) {
+  .forDesktop-dflex {
+    display: none !important;
+  }
+}
+
+.forMobile {
+  display: none !important;
+}
+@media only screen and (max-width: 62em) {
+  .forMobile {
+    display: block !important;
+  }
+}
+
+.forMobile-dflex {
+  display: none !important;
+}
+@media only screen and (max-width: 62em) {
+  .forMobile-dflex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+@font-face {
+  font-family: "HKGrotesk-Bold";
+  src: url("/fonts/HKGrotesk-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "HKGrotesk-Light";
+  src: url("/fonts/HKGrotesk-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "HKGrotesk-Regular";
+  src: url("/fonts/HKGrotesk-Regular.woff") format("woff");
+}
+header menu {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+header menu ul {
+  padding: 0;
+  margin: 0;
+}
+header menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+header menu ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #696969f8;
+  transition: 0.2s all linear;
+}
+header menu ul li a:hover {
+  color: #161616;
+}

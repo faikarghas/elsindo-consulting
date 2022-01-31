@@ -1,0 +1,28 @@
+.forDesktop{
+    display: block !important;
+    @include respond(down-tab-port){
+        display: none !important;
+    }
+}
+
+.forDesktop-dflex{
+    display: flex !important;
+    @include respond(down-tab-port){
+        display: none !important;
+    }
+}
+
+.forMobile{
+    display: none !important;
+    @include respond(down-tab-port){
+        display: block !important;
+    }
+}
+
+.forMobile-dflex{
+    display: none !important;
+    @include respond(down-tab-port){
+        display: flex !important;
+    }
+}
+
